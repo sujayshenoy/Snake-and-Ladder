@@ -8,9 +8,10 @@ public class Main {
 		
 		System.out.println("Welcome to Snake and Ladder Game");
 		
+		//new game with initial position 0 is created
+		Game g = new Game();
+		
 	}
-	
-	Game g = new Game(); //new game with initial position 0 is created
 	
 }
 
