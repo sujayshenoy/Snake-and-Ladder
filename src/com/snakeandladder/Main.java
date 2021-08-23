@@ -14,12 +14,24 @@ public class Main {
 		System.out.println("Press Enter to roll the die");
 		System.out.println("'STOP' to stop playing");
 		Scanner s = new Scanner(System.in);
+		//g.position = 100;
 		
 		while(true) {
 			String resp = s.nextLine();
 			if(resp.equals("STOP")) {
 				System.out.println("Stopping Game\nGame Terminated Successfully");
 				break;
+			}
+			else if ( g.position > 100 ) {
+				System.out.println("GG!! You Won");
+				System.out.println("Do you want to play again?? Y/N");
+				if(s.nextLine().equals("N") || s.nextLine().equals("n")) {
+					System.out.println("Stopping Game\nGame Terminated Successfully");
+					break;
+				}
+				else {
+					g.position = 0;
+				}
 			}
 			else {
 				if(g.noPlayFlag == 0) {
