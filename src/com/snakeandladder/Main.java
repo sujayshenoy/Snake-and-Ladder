@@ -10,7 +10,7 @@ public class Main {
 		
 		//new game with initial position 0 is created
 		Game g = new Game();
-		
+		System.out.println("Die Says: "+g.rollDie());
 	}
 	
 }
@@ -40,5 +40,9 @@ class Game{
 										entry(95,75),
 										entry(98,79)
 									);
+	
+	public int rollDie() {
+		return (int)Math.floor(Math.random()*((6-1)+1)+1);
+	}
 	
 }
